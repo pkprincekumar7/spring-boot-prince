@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: w-college-listener
+  mail:
+    host: smtp.gmail.com
+    username: princekumartricon@gmail.com
+    password: tricon@123
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: tiger
+  jpa:
+    hibernate:
+     ddlAuto: update
+
+kafka:
+  bootstrap-servers: localhost:9092
+  enable-auto-commit: false
+  auto-commit-interval-ms: 100
+  session-timeout-ms: 15000
+  group-id: springboot-workshop
+  auto-offset-reset: earliest
+  topic:
+    collegetopic: W_COLLEGE
+
+server:
+  port: 8005
+
+logging:
+  level:
+    com:
+      college:
+        listener: INFO
+    root: WARN
+    org:
+      springframework: WARN

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: swagger2-example
+
+server:
+  port: 8075
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: w-health
+  mail:
+    host: smtp.gmail.com
+    username: princekumartricon@gmail.com
+    password: tricon@123
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+
+server:
+  port: 9005
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+logging:
+  level:
+    com:
+      health: INFO
+    root: WARN
+    org:
+      springframework: WARN

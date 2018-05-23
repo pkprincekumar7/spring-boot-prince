@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: kafka-producer
+
+kafka:
+  bootstrap-servers: localhost:9092
+  retries: 0
+  batch-size: 16384
+  linger-ms: 1
+  buffer-memory: 33554432
+
+server:
+  port: 8073
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost

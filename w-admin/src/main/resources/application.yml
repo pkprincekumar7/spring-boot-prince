@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: w-admin
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: tiger
+  jpa:
+    hibernate:
+     ddlAuto: update
+
+server:
+  port: 9002
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+logging:
+  level:
+    com:
+      admin: INFO
+    root: WARN
+    org:
+      springframework: WARN
+
+kafka:
+  topic:
+    login: W_LOGIN
+    admin: W_ADMIN
+    teacher: W_TEACHER
+    student: W_STUDENT
+    college: W_COLLEGE
+    feedback: W_FEEDBACK
+  producer:
+    url: http://kafka-producer/producer/send/

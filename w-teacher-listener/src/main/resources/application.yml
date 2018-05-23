@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: w-teacher-listener
+  mail:
+    host: smtp.gmail.com
+    username: princekumartricon@gmail.com
+    password: tricon@123
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: tiger
+  jpa:
+    hibernate:
+     ddlAuto: update
+
+kafka:
+  bootstrap-servers: localhost:9092
+  enable-auto-commit: false
+  auto-commit-interval-ms: 100
+  session-timeout-ms: 15000
+  group-id: springboot-workshop
+  auto-offset-reset: earliest
+  topic:
+    teachertopic: W_TEACHER
+
+server:
+  port: 8003
+
+logging:
+  level:
+    com:
+      teacher:
+        listener: INFO
+    root: WARN
+    org:
+      springframework: WARN

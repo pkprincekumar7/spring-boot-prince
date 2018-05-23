@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: kafka-consumer
+
+kafka:
+  bootstrap-servers: localhost:9092
+  enable-auto-commit: false
+  auto-commit-interval-ms: 100
+  session-timeout-ms: 15000
+  group-id: medium_group
+  auto-offset-reset: earliest
+  topic:
+    mediumtopic: MEDIUM_TOPIC
+
+server:
+  port: 8074
